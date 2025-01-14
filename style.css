@@ -574,52 +574,7 @@ section.other {
     gap: 20px;
 }
 
-.other-box {
-    flex: 0 0 48%;
-    text-align: left;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 2px solid var(--main-color);
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Certificate Icon Styling */
-.other-box i {
-    font-size: 6rem;
-    color: var(--main-color);
-    margin-bottom: 10px;
-}
-
-/* Subheading and Links Styling */
-.other-box h3 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.other-box h6 {
-    font-size: 1.6rem;
-    color: #555;
-    margin: 10px 0;
-}
-
-.other-box a {
-    
-    color: var(--main-color);
-    text-decoration: none;
-    border: 1px solid #4CAF50;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.other-box a:hover {
-    background-color: var(--main-color);
-    color: #fff;
-}
-
-/*blog*/
+.other-box,
 .other-box2 {
     flex: 0 0 48%;
     text-align: left;
@@ -630,28 +585,30 @@ section.other {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Certificate Icon Styling */
-.other-box2 i{
+.other-box i,
+.other-box2 i {
     font-size: 6rem;
     color: var(--main-color);
     margin-bottom: 10px;
 }
 
 /* Subheading and Links Styling */
+.other-box h3,
 .other-box2 h3 {
     font-size: 3rem;
     color: #333;
     margin-bottom: 15px;
 }
 
+.other-box h6,
 .other-box2 h6 {
     font-size: 1.6rem;
     color: #555;
     margin: 10px 0;
 }
 
+.other-box a,
 .other-box2 a {
-    
     color: var(--main-color);
     text-decoration: none;
     border: 1px solid #4CAF50;
@@ -660,10 +617,53 @@ section.other {
     transition: all 0.3s ease;
 }
 
+.other-box a:hover,
 .other-box2 a:hover {
     background-color: var(--main-color);
     color: #fff;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .other-box,
+    .other-box2 {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .other-box h3,
+    .other-box2 h3 {
+        font-size: 2.5rem;
+    }
+
+    .other-box h6,
+    .other-box2 h6 {
+        font-size: 1.4rem;
+    }
+
+    .other-box a,
+    .other-box2 a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .other-box h3,
+    .other-box2 h3 {
+        font-size: 2rem;
+    }
+
+    .other-box h6,
+    .other-box2 h6 {
+        font-size: 1.2rem;
+    }
+
+    .other-box a,
+    .other-box2 a {
+        font-size: 1.2rem;
+    }
+}
+
 
 /*contact*/
 .contact {
@@ -757,24 +757,3 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 2.5rem;
-    }
-
-    .navbar a {
-        font-size: 1.4rem;
-    }
-
-    .home-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .home-content h3 {
-        font-size: 2rem;
-    }
-
-    .home-content p {
-        font-size: 1.4rem;
-    }
-}
