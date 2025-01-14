@@ -320,12 +320,12 @@ span{
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about {
-        flex-direction: column; /* Stack the content vertically */
+        flex-direction: column; 
         text-align:justify;
     }
 
     .about-img img {
-        width: 30vw; /* Adjust image size for smaller screens */
+        width: 30vw; 
     }
 
     .about-content {
@@ -335,7 +335,7 @@ span{
     .about-content h2,
     .about-content h3,
     .about-content p {
-        text-align: justify; /* Center-align text for better readability */
+        text-align: justify; 
     }
 }
 
