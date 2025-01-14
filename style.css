@@ -266,8 +266,6 @@ span{
     }
 }
 
-
-/*about*/
 /* about */
 .about {
     display: flex;
@@ -279,7 +277,7 @@ span{
 }
 
 .about-img img {
-    width: 25vw;
+    width: 45vw;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
