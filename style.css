@@ -268,16 +268,18 @@ span{
 
 
 /*about*/
-.about{
+/* about */
+.about {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     background: var(--snd-bg-color);
+    padding: 2rem;
 }
 
-.about-img img{
-    width:25vw;
+.about-img img {
+    width: 25vw;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
@@ -285,42 +287,58 @@ span{
     transition: 0.4s ease;
 }
 
-.about-img img:hover{
-    box-shadow: 0 0 25px var(--main-color), 
+.about-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
                 0 0 35px var(--main-color),
                 0 0 45px var(--main-color);
 }
 
-.heading{
+.heading {
     font-size: 6rem;
     text-align: center;
 }
 
-.about-content{
+.about-content {
     padding: 0 4rem;
 }
 
-.about-content h2{
+.about-content h2 {
     text-align: left;
     line-height: 1.2;
 }
 
-.about-content h3{
+.about-content h3 {
     font-size: 3rem;
 }
 
-.about-content p{
-    font-size: 1.8rem;
+.about-content p {
+    font-size: 1.6rem;
     margin: 2rem 0 3rem;
     text-align: justify;
 }
 
-/* Skills Section Styling */
-section.skill {
-    background-color: #ffffff; 
-    max-width: 1000px;
-    margin: 40px auto;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack the content vertically */
+        text-align:justify;
+    }
+
+    .about-img img {
+        width: 30vw; /* Adjust image size for smaller screens */
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-content h2,
+    .about-content h3,
+    .about-content p {
+        text-align: justify; /* Center-align text for better readability */
+    }
 }
+
 
 /* Heading Styling */
 h2.heading {
