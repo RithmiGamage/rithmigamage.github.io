@@ -94,6 +94,7 @@ section{
 }
 
 /* Home Section */
+/* General Styles for Desktop */
 .home {
     display: flex;
     align-items: center;
@@ -146,6 +147,11 @@ span {
     font-size: 1.6rem;
 }
 
+.social-media {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -157,7 +163,7 @@ span {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 1rem;
     transition: 0.3s ease;
 }
 
@@ -189,33 +195,53 @@ span {
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
-        text-align: center; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .home-img {
-        margin-bottom: 10px;
+        order: 1; /* Image will be placed first */
+        margin-bottom: 2rem;
     }
 
     .home-img img {
-        width: 35vw; 
+        width: 40vw; /* Slightly larger on smaller screens */
     }
 
     .home-content {
-        margin-left: 0; 
+        order: 2; /* Content will be placed below the image */
+        margin: 0; /* Remove left margin for centered layout */
+    }
+
+    .social-media {
+        margin-top: 2rem;
+        order: 3; /* Social media links below text content */
+    }
+
+    .social-media a {
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-img img {
+        width: 60vw; /* Make the profile image larger on very small screens */
     }
 
     .home-content h1 {
-        font-size: 3.5rem; 
+        font-size: 4rem;
     }
 
     .home-content h3 {
-        font-size: 3rem; 
+        font-size: 2.5rem;
     }
 
     .home-content p {
-        font-size: 1.4rem; 
+        font-size: 1.4rem;
     }
 }
+
 
 /* About Section */
 .about {
@@ -290,7 +316,7 @@ span {
 }
 
 .about-img img {
-    width: 25vw;
+    width: 55vw;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
@@ -336,7 +362,7 @@ span {
     }
 
     .about-img img {
-        width: 30vw; /* Adjust image size for smaller screens */
+        width: 40vw; /* Adjust image size for smaller screens */
     }
 
     .about-content {
