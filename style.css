@@ -103,13 +103,8 @@ section{
     margin-top: 60px;
     padding: 20px;
 }
-.home{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.home-img img{
+.home-img img {
     width: 25vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
@@ -118,52 +113,40 @@ section{
     transition: 0.4s ease;
 }
 
-.home-img img:hover{
+.home-img img:hover {
     box-shadow: 0 0 25px var(--main-color), 
                 0 0 35px var(--main-color),
                 0 0 45px var(--main-color);
 }
 
-@keyframes floatImages {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-2.4rem);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.home-content{
+.home-content {
     margin-left: 5rem;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 3.7rem;
     font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
 }
 
-span{
+span {
     color: var(--main-color);
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
 
-.social-media a{
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -178,14 +161,14 @@ span{
     transition: 0.3s ease;
 }
 
-.social-media a:hover{
+.social-media a:hover {
     transform: scale(1.2) translateY(-10px);
     background-color: var(--main-color);
     color: var(--bg-color);
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
@@ -198,10 +181,41 @@ span{
     transition: 0.3s ease;
 }
 
-.btn:hover{
-    box-shadow:0 0 1.6rem var(--main-color);
+.btn:hover {
+    box-shadow: 0 0 1.6rem var(--main-color);
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .home-img {
+        margin-bottom: 10px;
+    }
+
+    .home-img img {
+        width: 35vw; 
+    }
+
+    .home-content {
+        margin-left: 0; 
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem; 
+    }
+
+    .home-content h3 {
+        font-size: 3rem; 
+    }
+
+    .home-content p {
+        font-size: 1.4rem; 
+    }
+}
 
 /* About Section */
 .about {
@@ -265,7 +279,6 @@ span{
         font-size: 4.5rem;
     }
 }
-
 /* about */
 .about {
     display: flex;
@@ -277,7 +290,7 @@ span{
 }
 
 .about-img img {
-    width: 45vw;
+    width: 25vw;
     border: 2px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
@@ -318,12 +331,12 @@ span{
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about {
-        flex-direction: column; 
+        flex-direction: column; /* Stack the content vertically */
         text-align:justify;
     }
 
     .about-img img {
-        width: 45vw; 
+        width: 30vw; /* Adjust image size for smaller screens */
     }
 
     .about-content {
@@ -333,7 +346,7 @@ span{
     .about-content h2,
     .about-content h3,
     .about-content p {
-        text-align: justify; 
+        text-align: justify; /* Center-align text for better readability */
     }
 }
 
@@ -345,7 +358,7 @@ h2.heading {
 }
 
 h2.heading span {
-    color: var(--main-color); /* Highlight color */
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -363,6 +376,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .list li {
@@ -374,6 +388,9 @@ h3 {
     transition: all 0.3s ease;
     background-color: var(--bg-color);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 30px); 
+    text-align: center; 
+    max-width: 200px; 
 }
 
 .list li:hover {
@@ -389,6 +406,18 @@ section.skill h3 + .list {
     margin-bottom: 40px;
 }
 
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .list li {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .list li {
+        flex: 1 1 100%; 
+    }
+}
 /*services*/
 .services h2{
     margin-bottom: 5rem;
@@ -487,7 +516,7 @@ section.other {
 
 .other-box i,
 .other-box2 i {
-    font-size: 6rem;
+    font-size: 4rem;
     color: var(--main-color);
     margin-bottom: 10px;
 }
@@ -495,7 +524,7 @@ section.other {
 /* Subheading and Links Styling */
 .other-box h3,
 .other-box2 h3 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--text-color);
     margin-bottom: 15px;
 }
@@ -533,7 +562,7 @@ section.other {
 
     .other-box h3,
     .other-box2 h3 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .other-box h6,
